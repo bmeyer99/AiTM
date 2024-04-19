@@ -1,0 +1,4 @@
+yarn add styled-components
+yarn add @atlaskit/css-reset
+# yarn add react-beautiful-dnd ## old version
+yarn add @hello-pangea/dnd

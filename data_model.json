@@ -1,0 +1,188 @@
+{ "profiles":
+    {
+        "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "cognito_id": {
+            "bsonType": "string"
+        },
+        "email": {
+            "bsonType": "string"
+        },
+        "details": {
+            "bsonType": "string"
+        },
+        "boards": {0
+            "bsonType": "array",
+            "items": {
+            "bsonType": "objectId"
+            }
+        },
+        "login_history": {
+            "bsonType": "array",
+            "items": {
+            "bsonType": "timestamp"
+            }
+        },
+        "history": {
+            "bsonType": "array",
+            "items": {
+            "bsonType": "object",
+            "properties": {}
+            }
+        }
+        },
+        "required": [
+        "_id",
+        "cognito_id",
+        "email",
+        "login_history"
+        ]
+    },
+    "boards": {
+        "title": "boards",
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "name": {
+            "bsonType": "string"
+          },
+          "details": {
+            "bsonType": "string"
+          },
+          "members": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "stages": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            }
+          },
+          "tags": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            }
+          },
+          "owner_id": {
+            "bsonType": "objectId"
+          },
+          "created_at": {
+            "bsonType": "timestamp"
+          }
+        },
+        "required": [
+          "_id",
+          "name",
+          "owner_id",
+          "created_at"
+        ]
+      },
+      "tasks": {
+        "title": "tasks",
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "owner_id": {
+            "bsonType": "string"
+          },
+          "board_id": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "details": {
+            "bsonType": "string"
+          },
+          "stage": {
+            "bsonType": "string"
+          },
+          "subtasks": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "parent_task": {
+            "bsonType": "objectId"
+          },
+          "created_at": {
+            "bsonType": "timestamp"
+          },
+          "history": {
+            "bsonType": "object",
+            "properties": {
+              "timestamp": {
+                "bsonType": "timestamp"
+              },
+              "change": {
+                "bsonType": "string"
+              }
+            }
+          },
+          "members": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "tags": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            }
+          },
+          "attachments": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "name": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "_id",
+          "owner_id",
+          "details",
+          "created_at"
+        ]
+      },
+      "attachments": {
+        "properties": {
+          "_id": {
+            "bsonType": "objectId"
+          },
+          "friendly_name": {
+            "bsonType": "string"
+          },
+          "owner_id": {
+            "bsonType": "objectId"
+          },
+          "file_id": {
+            "bsonType": "string"
+          },
+          "task_id": {
+            "bsonType": "objectId"
+          },
+          "created": {
+            "bsonType": "timestamp"
+          }
+        },
+        "required": [
+          "_id",
+          "friendly_name",
+          "owner_id",
+          "file_id"
+        ]
+      }
+    }
